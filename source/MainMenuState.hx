@@ -39,7 +39,7 @@ class MainMenuState extends MusicBeatState
 
 	var curDifficulty:Int = -1;
 	
-	final optionShit:Array<String> = ['story_mode', 'freeplay', 'credits', 'options', 'patch', 'soundtest'];
+	final optionShit:Array<String> = ['story_mode', 'freeplay', 'credits', 'options'];
 	var camFollow:FlxObject;
 	var camFollowPos:FlxObject;
 	var debugKeys:Array<FlxKey>;
@@ -57,7 +57,7 @@ class MainMenuState extends MusicBeatState
 		WeekData.loadTheFirstEnabledMod();
 
 		#if desktop
-		DiscordClient.changePresence("On the Main Menu", null);
+		DiscordClient.changePresence("Selecting What to Do", null);
 		#end
 		
 		debugKeys = ClientPrefs.keyBinds.get('debug_1').copy();
