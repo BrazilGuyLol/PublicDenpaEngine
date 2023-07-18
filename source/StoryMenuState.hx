@@ -178,7 +178,7 @@ class StoryMenuState extends MusicBeatState
 		hscript.call("onCreatePost", []);
 
 		#if desktop
-		DiscordClient.changePresence("In the Story Menu", '${loadedWeeks.length} Weeks');
+		DiscordClient.changePresence("SELECTING THE VICTIM.", '${loadedWeeks.length} Weeks');
 		#end
 
 		super.create();
