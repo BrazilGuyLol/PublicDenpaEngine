@@ -140,16 +140,6 @@ class FreeplayState extends MusicBeatState
 		add(bg);
 		bg.screenCenter();
 
-		if (!ClientPrefs.settings.get("lowQuality")) {
-			bgScroll = new FlxBackdrop(Paths.image('menuBGHexL6'));
-			bgScroll.velocity.set(29, 30);
-			add(bgScroll);
-	
-			bgScroll2 = new FlxBackdrop(Paths.image('menuBGHexL6'));
-			bgScroll2.velocity.set(-29, -30);
-			add(bgScroll2);
-		}
-
 		gradient = new FlxSprite().loadGraphic(Paths.image('gradient'));
 		add(gradient);
 		gradient.screenCenter();
@@ -259,7 +249,7 @@ class FreeplayState extends MusicBeatState
         add(black);
 
 		#if desktop
-		DiscordClient.changePresence("In the Freeplay Menu", '"$section" Section - ${songs.length} Songs');
+		DiscordClient.changePresence("Selecting An Song", '"$section" Section - ${songs.length} Songs');
 		#end
 
 		hscript.call("onCreatePost", []);
